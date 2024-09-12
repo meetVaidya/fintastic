@@ -1,8 +1,11 @@
-import Link from 'next/link'
-import { Flame } from 'lucide-react'
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { RegisterLink, LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
+import Link from "next/link";
+import { Flame } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+    RegisterLink,
+    LoginLink,
+} from "@kinde-oss/kinde-auth-nextjs/components";
 
 export default function HorizontalNavbar() {
     return (
@@ -13,9 +16,17 @@ export default function HorizontalNavbar() {
                     <span>Fintastic</span>
                 </Link>
                 <div className="hidden md:flex space-x-6">
-                    <Link href="https://github.com/meetVaidya/NFC3_HackShacks" className="flex items-center">
+                    <Link
+                        href="https://github.com/meetVaidya/FinTastic"
+                        className="flex items-center"
+                    >
                         Github
-                        <Badge variant="secondary" className="ml-2 bg-yellow-500 text-black text-xs">Hot</Badge>
+                        <Badge
+                            variant="secondary"
+                            className="ml-2 bg-yellow-500 text-black text-xs"
+                        >
+                            Hot
+                        </Badge>
                     </Link>
                 </div>
             </div>
@@ -24,11 +35,13 @@ export default function HorizontalNavbar() {
                     <LoginLink>Sign in</LoginLink>
                 </Button>
 
-                <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+                <Button
+                    variant="outline"
+                    className="text-white border-white hover:bg-white hover:text-black"
+                >
                     <RegisterLink>Sign up</RegisterLink>
                 </Button>
-
             </div>
         </nav>
-    )
+    );
 }
